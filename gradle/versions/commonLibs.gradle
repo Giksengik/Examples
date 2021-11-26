@@ -1,0 +1,22 @@
+
+ext.Versions = [
+        dagger: "2.40",
+        daggerCompile: "2.37",
+        coreKtx: "1.7.0",
+        appcompat: "1.3.1",
+        material: "1.4.0",
+        testJunit: "4.13.2",
+        androidJunit: "1.1.3",
+        espresso: "3.4.0",
+]
+
+ext.Libs = [
+        dagger: "com.google.dagger:dagger:${Versions.dagger}",
+        daggerCompile: "com.google.dagger:${Versions.daggerCompile}",
+        coreKtx: "androidx.core:core-ktx:${Versions.coreKtx}",
+        appcompat: "androidx.appcompat:appcompat:${Versions.appcompat}",
+        material: "com.google.android.material:material:${Versions.material}",
+        testJunit: "junit:junit:${Versions.testJunit}",
+        androidJunit: "androidx.test.ext:junit:${Versions.androidJunit}",
+        espresso: "androidx.test.espresso:espresso-core:${Versions.espresso}",
+]

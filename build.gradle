@@ -1,0 +1,31 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.0.3"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.31"
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    compileSdk = 31
+    applicationId = "gikse.di.injects"
+    minSdk = 21
+    targetSdk = 31
+    versionCode = 1
+}
+
+allprojects {
+    ext {
+        DIModule = {
+            apply from: rootProject.file('gradle/di-module.gradle')
+        }
+    }
+}
+
