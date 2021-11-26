@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "DI Examples"
 include ':injects'
+include ':sources:dagger:injects'

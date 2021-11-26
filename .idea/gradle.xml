@@ -11,6 +11,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/injects" />
+            <option value="$PROJECT_DIR$/sources" />
+            <option value="$PROJECT_DIR$/sources/dagger" />
+            <option value="$PROJECT_DIR$/sources/dagger/injects" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
