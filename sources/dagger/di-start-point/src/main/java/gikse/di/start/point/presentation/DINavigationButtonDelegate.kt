@@ -22,6 +22,16 @@ class DINavigationButtonDelegate(
         payloads: List<BaseListItem.Payloadable>
     ) = viewHolder.bind(model)
 
+    override fun createViewHolder(parent: ViewGroup): RecyclerView.ViewHolder =
+        ViewHolder(
+            DiScreenNavigationButtonBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            ),
+            onButtonClickListener
+        )
+
     class ViewHolder(
         private val binding: DiScreenNavigationButtonBinding,
         private val onButtonClickListener: OnButtonClickListener
@@ -36,16 +46,6 @@ class DINavigationButtonDelegate(
             }
         }
     }
-
-    override fun createViewHolder(parent: ViewGroup): RecyclerView.ViewHolder =
-        ViewHolder(
-            DiScreenNavigationButtonBinding.inflate(
-                LayoutInflater.from(parent.context),
-                parent,
-                false
-            ),
-            onButtonClickListener
-        )
 }
 
 interface OnButtonClickListener {

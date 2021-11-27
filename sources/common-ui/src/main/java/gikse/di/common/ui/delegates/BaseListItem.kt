@@ -10,9 +10,9 @@ import androidx.recyclerview.widget.DiffUtil
 interface BaseListItem {
     fun id(): String
 
-    fun content(): Any
-
     fun payload(other: Any): Payloadable = Payloadable.None
+
+    fun compareToOther(other : BaseListItem) : Boolean
 
     interface Payloadable {
         object None: Payloadable
@@ -26,7 +26,7 @@ class BaseListItemDiffUtil : DiffUtil.ItemCallback<BaseListItem>() {
 
     @SuppressLint("DiffUtilEquals")
     override fun areContentsTheSame(oldItem: BaseListItem, newItem: BaseListItem): Boolean =
-        oldItem.content() == newItem.content()
+        oldItem.compareToOther(newItem)
 
     override fun getChangePayload(oldItem: BaseListItem, newItem: BaseListItem): Any =
         oldItem.payload(newItem)

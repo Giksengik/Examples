@@ -10,6 +10,6 @@ class DINavigationButtonUiModel(
     val event: DIStartPointEvent
 ) : BaseListItem {
     override fun id(): String = name
-
-    override fun content(): Any = event
+    override fun compareToOther(other: BaseListItem): Boolean =
+        this.event == (other as DINavigationButtonUiModel).event
 }
