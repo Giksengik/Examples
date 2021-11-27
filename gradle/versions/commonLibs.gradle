@@ -12,7 +12,7 @@ ext.Versions = [
 
 ext.Libs = [
         dagger: "com.google.dagger:dagger:${Versions.dagger}",
-        daggerCompile: "com.google.dagger:${Versions.daggerCompile}",
+        daggerCompile: "com.google.dagger:dagger-compiler:${Versions.daggerCompile}",
         coreKtx: "androidx.core:core-ktx:${Versions.coreKtx}",
         appcompat: "androidx.appcompat:appcompat:${Versions.appcompat}",
         material: "com.google.android.material:material:${Versions.material}",

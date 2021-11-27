@@ -6,6 +6,21 @@ dependencyResolutionManagement {
         jcenter() // Warning: this repository is going to shut down soon
     }
 }
-rootProject.name = "DI Examples"
-include ':injects'
-include ':sources:dagger:injects'
+rootProject.name = "examples"
+includeRecursive(file('sources'))
+
+void includeRecursive(File dir) {
+    if (isModule(dir)) {
+        String moduleName = ":$dir.name"
+        include(moduleName)
+        project(moduleName).projectDir = dir
+    } else {
+        dir.eachDir { includeRecursive(it) }
+    }
+}
+
+static boolean isModule(File dir) {
+    return new File(dir, 'build.gradle').isFile()
+}
+
+include ':sources:common-ui'

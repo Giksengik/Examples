@@ -1,0 +1,5 @@
+androidModule()
+
+dependencies {
+    implementation project(':di-start-point')
+}

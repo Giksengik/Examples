@@ -13,6 +13,10 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildFeatures {
+        viewBinding true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -29,6 +33,7 @@ android {
 }
 
 dependencies {
-    implementation Libs.dagger
-    kapt Libs.daggerCompile
+    implementation Libs.coreKtx
+    implementation Libs.appcompat
+    implementation Libs.material
 }

@@ -26,6 +26,14 @@ allprojects {
         DIModule = {
             apply from: rootProject.file('gradle/di-module.gradle')
         }
+
+        androidModule = {
+            apply from: rootProject.file('gradle/android-module.gradle')
+        }
+
+        startPointModule = {
+            apply from: rootProject.file('gradle/start-point-module.gradle')
+        }
     }
 }
 

@@ -1,0 +1,7 @@
+startPointModule()
+
+dependencies {
+    implementation project(':common-ui')
+    implementation Libs.dagger
+    kapt Libs.daggerCompile
+}
