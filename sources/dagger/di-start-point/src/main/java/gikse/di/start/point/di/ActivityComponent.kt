@@ -1,7 +1,7 @@
 package gikse.di.start.point.di
 
 import dagger.Component
-import gikse.di.start.point.DIStartActivity
+import gikse.di.start.point.presentation.DIStartActivity
 
 /**
  * @author e.a.vlasov

@@ -1,5 +1,7 @@
-package gikse.di.start.point
+package gikse.di.start.point.model
 
+import gikse.di.start.point.presentation.DINavigationButtonUiModel
+import gikse.di.start.point.presentation.DIStartPointEvent
 import javax.inject.Inject
 
 /**

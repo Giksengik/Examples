@@ -1,4 +1,4 @@
-package gikse.di.start.point
+package gikse.di.start.point.presentation
 
 /**
  * @author e.a.vlasov

@@ -1,9 +1,10 @@
-package gikse.di.start.point
+package gikse.di.start.point.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import gikse.di.common.ui.delegates.CompositeAdapter
 import gikse.di.common.ui.utils.lazyUnsafe
+import gikse.di.start.point.model.DINavigationButtonsFactory
 import gikse.di.start.point.databinding.ActivityDiStartBinding
 import gikse.di.start.point.di.DaggerActivityComponent
 import javax.inject.Inject
